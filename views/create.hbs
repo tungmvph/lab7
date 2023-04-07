@@ -1,0 +1,44 @@
+  <nav class="navbar navbar-inverse navbar-custom">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" >ADMIN</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+         <li><a href="/api/book">Home</a></li>
+        <li><a href="/api/book/create">Product</a></li>
+        <li><a href="/us/list">Acount</a></li>
+        </ul>
+      
+         <ul class="nav navbar-nav navbar-right">
+        <li><a href="/api/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a onclick="loginSuccess()" href="/api/signin"><span class="glyphicon
+              glyphicon-log-in"></span> Login</a></li>
+      </ul>
+      </div>
+    </div>
+  </nav>
+<div class="container w-50 p-5 my-5 shadow">
+
+    {{!-- Form --}}
+    <form action="/api/book" method="post">
+        {{!-- Button --}}
+        <div class="row mb-3">
+            <a class="btn btn-dark col-auto me-auto" href="/api/book"><i class="fa-solid fa-arrow-left"></i>
+                Back</a>
+            <code class="mx-auto col-auto">{{notify}}</code>
+           
+        </div>
+
+        {{!-- Input --}}
+        {{> input}}
+        <button type="submit" class="btn btn-primary col-auto ms-auto w-100">Add book</button>
+    </form>
+
+
+</div>

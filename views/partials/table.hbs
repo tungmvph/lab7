@@ -1,0 +1,30 @@
+<div class="row">
+  <table
+    class="table table-striped table-borderless table-hover table-response shadow"
+  >
+    {{! Head }}
+    <thead>
+      <tr>
+        <th>isBn</th>
+        <th>title</th>
+        <th>author</th>
+        <th>publisher</th>
+      </tr>
+    </thead>
+
+    {{! Body }}
+
+    <tbody>
+      {{#each books}}
+        <tr>
+          <td class="align-middle">{{this.isbn}}</td>
+          <td class="align-middle">{{this.title}}</td>
+          <td class="align-middle">{{this.author}}</td>
+          <td class="align-middle">{{this.publisher}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+
+  </table>
+
+</div>
